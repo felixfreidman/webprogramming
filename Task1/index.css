@@ -47,3 +47,11 @@ body {
   border: 2px solid black;
   text-align: center;
 }
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 100px;
+}
