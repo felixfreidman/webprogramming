@@ -51,3 +51,18 @@ body {
   font-size: 40px;
   text-transform: capitalize;
 }
+
+.admin__input {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 10px 5px;
+  border-radius: 8px;
+  width: 80%;
+}
+.admin__link {
+  text-decoration: none;
+  color: black;
+}

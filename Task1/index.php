@@ -13,7 +13,7 @@
       <h1><a href = "./Task2/index.html">Перейти на функциональный способ</a></h1>
       <h1><a href = "./Task3/index.php">Перейти на страницу переводчика</a></h1>
       <h1><a href = "./Task4/index.php">Перейти на страницу с формой регистрацией</a></h1>
-      <h1><a href = "./Task4/admin.php">Перейти на страницу с формой регистрацией</a></h1>
+      <h1><a href = "./Task4/admin.php">Перейти на страницу c админской панелью</a></h1>
       <table class = "main__table">
 		<?php
 //Table Header Creator

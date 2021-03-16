@@ -5,20 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Функциональный способ</title>
+    <title>Панель Админа</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
 
     <div class="main">
-        <form method="POST" action="./adminHandler.php">
-            <label for="file">
-                <input type="checkbox" name="file" id="file">
-            </label>
+        <form method="POST" action="./adminHandler.php" class="main__form" >
 
             <?php
-$inputControlNumber = mt_rand(0, 1000);
 
 $dir = "./Appliance/";
 
@@ -26,10 +22,11 @@ $dir = "./Appliance/";
 
 $workingDir = opendir($dir);
 while (($file = readdir($workingDir)) !== false) {
+    $inputControlNumber = mt_rand(0, 1000);
     if (($file != ".") && ($file != "..")) {
         echo '
-            <label class = "admin__input" for="file' . $inputControlNumber . '">
-            <a href = "./Appliance/' . $file . '">Посмотреть файл</a>
+            <label class="admin__input" for="file' . $inputControlNumber . '">
+            <a class="admin__link" " href = "./Appliance/' . $file . '">Посмотреть файл</a>
                 <input type="checkbox" name="file" id="file' . $inputControlNumber . '">
             </label> ';
     }
