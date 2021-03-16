@@ -13,7 +13,7 @@
 date_default_timezone_set('UTC');
 
 $fileControlNumber = mt_rand(0, 1000);
-$fileName = './Appliance/registrationFormData' . $fileControlNumber . 'txt';
+$fileName = './Appliance/registrationFormData' . $fileControlNumber . '.txt';
 $file = fopen($fileName, 'a+');
 $registrationName = $_POST['nameField'];
 $registrationSurname = $_POST['surnameField'];
