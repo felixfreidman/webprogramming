@@ -12,8 +12,7 @@
 <body>
 
     <div class="main">
-        <form method="POST" action="./adminHandler.php" class="main__form" >
-
+        <form method="post" action="./adminHandler.php" class="main__form">
             <?php
 
 $dir = "./Appliance/";
@@ -21,20 +20,28 @@ $dir = "./Appliance/";
 // Открыть заведомо существующий каталог и начать считывать его содержимое
 
 $workingDir = opendir($dir);
+$checkboxCounter = 0;
+$checkboxArray = [];
+$counter = 1;
 while (($file = readdir($workingDir)) !== false) {
-    $inputControlNumber = mt_rand(0, 1000);
+    $inputControlNumber = mt_rand(0, 999);
     if (($file != ".") && ($file != "..")) {
         echo '
             <label class="admin__input" for="file' . $inputControlNumber . '">
             <a class="admin__link" " href = "./Appliance/' . $file . '">Посмотреть файл</a>
-                <input type="checkbox" name="file" id="file' . $inputControlNumber . '">
-            </label> ';
+                <input type="checkbox" id="file" name="file' . $inputControlNumber . '">
+            </label>
+            <input type="hidden" value = ' . $inputControlNumber . ' name="checkbox' . $counter . '">';
     }
 }
+
 closedir($workingDir);
 ?>
+            <button type="submit" class="main__submit-form">Удалить</button>
         </form>
     </div>
+
+
 </body>
 
 </html>

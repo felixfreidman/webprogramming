@@ -33,7 +33,7 @@ fwrite($file, $registrationMailing . "\n");
 fwrite($file, date(DATE_RFC822));
 fclose($file);
 echo '<h1 clsss = "header_succes">Успешно</h1>';
-header('https://felixfreidman.hostfl.ru
+header('Location: ../index.php
 ');
 ?>
 </body>
