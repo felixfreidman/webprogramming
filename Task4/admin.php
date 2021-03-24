@@ -22,7 +22,7 @@ $dir = "./Appliance/";
 $workingDir = opendir($dir);
 $checkboxCounter = 0;
 $checkboxArray = [];
-$counter = 1;
+$counter = 0;
 while (($file = readdir($workingDir)) !== false) {
     $inputControlNumber = mt_rand(0, 999);
     if (($file != ".") && ($file != "..")) {
@@ -32,6 +32,7 @@ while (($file = readdir($workingDir)) !== false) {
                 <input type="checkbox" id="file" name="file' . $inputControlNumber . '">
             </label>
             <input type="hidden" value = ' . $inputControlNumber . ' name="checkbox' . $counter . '">';
+        $counter++;
     }
 }
 
